@@ -23,3 +23,4 @@ kubectl apply -f .design-02/apps/addons-applicationset.yaml
 - Pro: Easier and more flexable to manage than app-of-apps pattern
 - Con: Either Human or GHA needs to `kubectl apply -f` each app root on Day 1
 
+

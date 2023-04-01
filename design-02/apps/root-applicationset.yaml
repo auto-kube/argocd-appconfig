@@ -9,7 +9,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/BretFisher/gitops-argocd.git
+      repoURL: https://github.com/auto-kube/argocd-appconfig.git
       revision: main
       directories:
       - path: design-02/apps/*
@@ -21,7 +21,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/BretFisher/gitops-argocd.git
+        repoURL: https://github.com/auto-kube/argocd-appconfig
         targetRevision: main
         path: '{{path}}'
       destination:
