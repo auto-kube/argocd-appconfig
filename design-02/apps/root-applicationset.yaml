@@ -9,10 +9,12 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/auto-kube/argocd-appconfig.git
+    #repoURL: https://github.com/auto-kube/argocd-appconfig.git
+      repoURL: https://github.com/auto-kube/wordsmith-k8s.git
       revision: main
       directories:
-      - path: design-02/apps/*
+      - path: /
+        # design-02/apps/*
   template:
     metadata:
       name: '{{path.basename}}'
@@ -21,7 +23,8 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/auto-kube/argocd-appconfig
+        repoURL: https://github.com/auto-kube/wordsmith-k8s.git
+          # https://github.com/auto-kube/argocd-appconfig
         targetRevision: main
         path: '{{path}}'
       destination:
